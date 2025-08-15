@@ -1,0 +1,92 @@
+/* General Body Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #eef2f3; /* A lighter, cleaner background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* Container for the Internship Cards - MODIFIED for 2x2 Grid */
+.internship-container {
+    display: grid;
+    /* This is the key change: creates exactly 2 columns of equal width */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem; /* Increased gap for better spacing */
+    width: 100%;
+    max-width: 900px; /* Constrains the width on very large screens */
+}
+
+/* Individual Internship Card Styling - ENHANCED */
+.internship-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    border-top: 5px solid #4a90e2; /* Accent color border */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for the Card */
+.internship-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* NEW Styling for the Icon */
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+/* Styling for the Heading in the Card */
+.internship-card h2 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+/* Styling for the Paragraphs in the Card */
+.internship-card p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.7;
+    margin: 0.5rem 0;
+}
+
+.internship-card p strong {
+    color: #333;
+}
+
+/* Styling for the "View Details" Button - ENHANCED */
+.btn-details {
+    display: inline-block;
+    background: linear-gradient(45deg, #4a90e2, #2772c3); /* Gradient background */
+    color: #ffffff;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.4);
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect for the Button */
+.btn-details:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.5);
+}
+
+/* Media Query for Responsiveness on smaller screens */
+@media (max-width: 768px) {
+    .internship-container {
+        /* On smaller screens, stack the cards in a single column */
+        grid-template-columns: 1fr;
+    }
+}
