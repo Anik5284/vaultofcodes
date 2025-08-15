@@ -113,6 +113,7 @@ header p {
     left: 0;
     width: 100%;
     height: 100%;
+    /* Default fallback gradient */
     background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
     display: flex;
     align-items: flex-end;
@@ -139,6 +140,35 @@ header p {
 .portfolio-item:hover .overlay h3 {
     transform: translateY(0);
 }
+
+
+/* --- NEW: CATEGORY-SPECIFIC COLORFUL OVERLAYS --- */
+
+/* Short-form & Football (Vibrant Pink/Orange) */
+.portfolio-item.short-form .overlay {
+    background: linear-gradient(to top, hsla(333, 81%, 59%, 0.9), hsla(28, 98%, 62%, 0.5));
+}
+
+/* Gaming & Anime (Deep Purple/Blue) */
+.portfolio-item.gaming .overlay {
+    background: linear-gradient(to top, hsla(260, 84%, 44%, 0.9), hsla(220, 96%, 57%, 0.5));
+}
+
+/* eCommerce & Ads (Rich Teal/Green) */
+.portfolio-item.ecommerce .overlay {
+    background: linear-gradient(to top, hsla(168, 76%, 42%, 0.9), hsla(145, 63%, 49%, 0.5));
+}
+
+/* Documentary (Earthy Orange/Brown) */
+.portfolio-item.documentary .overlay {
+    background: linear-gradient(to top, hsla(28, 80%, 52%, 0.9), hsla(43, 89%, 63%, 0.5));
+}
+
+/* Color Grading (Gold/Yellow) */
+.portfolio-item.color-grading .overlay {
+    background: linear-gradient(to top, hsla(45, 100%, 51%, 0.9), hsla(54, 96%, 65%, 0.5));
+}
+
 
 /* --- Lightbox Modal --- */
 .lightbox {
